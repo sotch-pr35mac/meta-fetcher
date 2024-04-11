@@ -1,0 +1,31 @@
+name: Check & Test
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup Environment
+        uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+          components: rustfmt, clippy
+      - name: Check
+        run: make check-ci
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup Environment
+        uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+      - name: Test
+        run: make test-ci

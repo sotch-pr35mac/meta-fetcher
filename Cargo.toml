@@ -1,0 +1,21 @@
+[package]
+name = "meta_fetcher"
+version = "0.1.0"
+edition = "2021"
+authors = ["Preston Wang-Stosur-Bassett <p.wanstobas@gmail.com>"]
+description = "A simple website metadata fetcher"
+repository = "https://gitub.com/sotch-pr35mac/meta-fetcher"
+readme = "README.md"
+keywords = ["meta", "fetch", "metadata", "website", "ureq"]
+categories = ["web-programming"]
+license = "MIT"
+exclude = ["LICENSE", "target"]
+
+[dependencies]
+ureq = "2.9.6"
+texting_robots = "0.2.2"
+select = "0.6.0"
+anyhow = "1.0.82"
+
+[features]
+network-tests = []
