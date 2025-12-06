@@ -148,7 +148,7 @@ mod tests {
     fn test_no_robots() {
         // This test depends on data from a website remaining the same as when this test was written
         // which is out of our control. Not the best idea here, but I'm short on time. If these
-        // tests fail because data from the source has changed, let's just udpate the expected
+        // tests fail because data from the source has changed, let's just update the expected
         // conditions.
         let expected = Metadata::new(Some("Example Domain".to_string()), None, None);
         let actual = fetch_metadata("http://example.com").unwrap();
@@ -160,11 +160,11 @@ mod tests {
     fn test_fetch_metadata() {
         // This test depends on data from a website remaining the same as when this test was written
         // which is out of our control. Not the best idea here, but I'm short on time. If these
-        // tests fail because data from the source has changed, let's just udpate the expected
+        // tests fail because data from the source has changed, let's just update the expected
         // conditions.
         let expected = Metadata::new(
-            Some("What are The 5 Love Languages?".to_string()), 
-            Some("Learn the 5 Love Languages® and discover how it all started.".to_string()), 
+            Some("What are The 5 Love Languages?".to_string()),
+            Some("Learn about The 5 Love Languages® and discover how it all started.".to_string()),
             Some(
                 "https://5lovelanguages.com/img/8af021a4-77a8-4984-8b6a-1924c93f8b2f/og_learn.jpg?fm=jpg&q=80&fit=max&crop=1200%2C627%2C0%2C0".to_string()
             )
@@ -178,7 +178,7 @@ mod tests {
     fn test_metadata_from_url() {
         // This test depends on data from a website remaining the same as when this test was written
         // which is out of our control. Not the best idea here, but I'm short on time. If these
-        // tests fail because data from the source has changed, let's just udpate the expected
+        // tests fail because data from the source has changed, let's just update the expected
         // conditions.
         let expected = Metadata::new(Some("Example Domain".to_string()), None, None);
         let actual = Metadata::from_url("http://example.com").unwrap();

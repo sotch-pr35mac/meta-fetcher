@@ -1,6 +1,6 @@
 [package]
 name = "meta_fetcher"
-version = "0.1.1"
+version = "0.1.2"
 edition = "2021"
 authors = ["Preston Wang-Stosur-Bassett <p.wanstobas@gmail.com>"]
 description = "A simple website metadata fetcher"
